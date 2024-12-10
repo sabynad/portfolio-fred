@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="assets/js/script.js" defer></script>
+        <title>Portfolio</title>
+        
+    </head>
+
+    <body>
+        <!-- Section Navbar -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo Coach Gardien" />
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="header-line"></div>
+
+        <main>
+            <!-- Section Accueil -->
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <h1>Bienvenue chez votre Coach de Gardien</h1>
+                    <p>Améliorez vos compétences et atteignez de nouveaux sommets !</p>
+                    <a href="#contact" class="cta-btn">Contactez-moi</a>
+                </div>
+            </section>
+        
+            <!-- Section À propos -->
+            <section id="about" class="about">
+                <div class="about-content">
+                    <div class="about-img-container">
+                        <img src="./assets/img/IMG_7480.avif" alt="Entrainement Gardien" class="about-img">
+                    </div>
+                    <div class="about-text">
+                        <h2>À propos de moi</h2>
+                        <p>
+                            Je suis ANIKINE Frédèric, Coach expérimenté spécialisé dans l'entraînement des gardiens de but. 
+                            Avec plusieurs années d'expérience, j'ai aidé de nombreux gardiens à perfectionner leurs compétences 
+                            et à atteindre leurs objectifs. Mon approche est basée sur l'innovation et l'écoute des besoins individuels.
+                        </p>
+                    </div>
+                </div>
+            </section>
+           
+            
+        
+            <!-- Section Services -->
+            <section id="services" class="services">
+                <h2>Mes Services</h2>
+                <div class="service-list">
+                    <div class="service-item">
+                        <img class="service-img" src="./assets/img/4a1d85_5db195460d794c3bafd1040041a32bbe~mv2.avif" alt="image gardien entrainement">
+                        <h3>Entraînement personnalisé</h3>
+                        <p>Des séances adaptées à vos besoins spécifiques, que vous soyez débutant ou professionnel.</p>  
+                    </div>
+                    <div class="service-item">
+                        <img class="service-img" src="./assets/img/analyse-video.jpeg" alt="tablette video analyse">
+                        <h3>Analyse vidéo</h3>
+                        <p>Analyse détaillée des performances avec retours sur les points à améliorer.</p>
+                    </div>
+                    <div class="service-item">
+                        <img class="service-img" src="./assets/img/prepa physique.avif" alt="image gardien arret ballon">
+                        <h3>Préparation physique</h3>
+                        <p>Des exercices de renforcement physique spécifiques aux exigences des gardiens de but.</p>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Section Contact -->
+            <section id="contact" class="contact">
+                <h2>Contactez-moi</h2>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" placeholder="Votre Nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Votre Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Votre Message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-btn">Envoyer</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Section Footer -->
+        <footer>
+            <p>&copy; 2024 Coach Gardien | Tous droits réservés</p>
+        </footer>
+    </body>
+
+</html>
