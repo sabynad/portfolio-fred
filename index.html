@@ -14,10 +14,13 @@
         <header>
             <nav class="navbar">
                 <div class="logo">
-                    <img src="images/logo.png" alt="Logo Coach Gardien" />
+                    <!-- <img class="" src="assets/img/gardien-header-v3.png" alt="Logo Gardien" /> -->
+                    <!-- <img class="header-logo" src="assets/img/logo2-removebg-preview.png" alt="Logo Gardien" /> -->
+                    <!-- <img class="" src="assets/img/logo3-removebg-preview.png" alt="Logo Gardien" /> -->
+                    <!-- <img class="" src="assets/img/logo4-removebg-preview.png" alt="Logo Gardien" /> -->
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#home">Welcome</a></li>
                     <li><a href="#about">À propos</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -27,15 +30,63 @@
 
         <div class="header-line"></div>
 
+        <div class="floating-logo">
+            <img src="assets/img/logo5.png" alt="Logo Gardien">
+        </div>
+
         <main>
-            <!-- Section Accueil -->
-            <section id="home" class="hero">
+            <section id="home" class="hero modern-hero">
                 <div class="hero-content">
-                    <h1>Bienvenue chez votre Coach de Gardien</h1>
-                    <p>Améliorez vos compétences et atteignez de nouveaux sommets !</p>
-                    <a href="#contact" class="cta-btn">Contactez-moi</a>
+                    <h1>Welcome</h1>
+                    <p>the universe apart from goalkeepers.
+                        Discover more than 22 years of coaching experience in the world!</p>
+                    <a href="#contact" class="cta-btn join-us-btn"> Rejoignez-nous</a>
                 </div>
+                <div class="hero-gallery">
+                    <div class="gallery-item large">
+                        <img src="assets/img/arret.jpg" alt="Gardien en action" class="clickable">
+                    </div>
+                    <div class="gallery-item small">
+                        <img src="assets/img/hymne-gardien.jpg" alt="Plongée du gardien" class="clickable">
+                    </div>
+                    <div class="gallery-item medium">
+                        <img src="assets/img/fred-trio-sourir.jpg" alt="trois joueurs qui sourient" class="clickable">
+                    </div>
+                    <div class="gallery-item medium">
+                        <img src="assets/img/fred-action.jpg" alt="Arrêt spectaculaire" class="clickable">
+                    </div>
+                    <div class="gallery-item large">
+                        <img src="assets/img/coach.jpg" alt="Arrêt spectaculaire" class="clickable">
+                    </div>
+                    <div class="gallery-item small">
+                        <img src="assets/img/fred.jpg" alt="Arrêt spectaculaire" class="clickable">
+                    </div>
+                    <div class="gallery-item large">
+                        <img src="assets/img/joueurs-gardien-hymne.jpg" alt="Arrêt spectaculaire" class="clickable">
+                    </div>
+                    <div class="gallery-item small">
+                        <img src="assets/img/gardien.jpg" alt="Arrêt spectaculaire" class="clickable">
+                    </div>
+                    <div class="gallery-item medium">
+                        <img src="assets/img/entrainement-explication.jpg" alt="Arrêt spectaculaire" class="clickable">
+                    </div>
+                    <div class="gallery-item large">
+                        <img src="assets/img/equipe.jpg" alt="Arrêt spectaculaire" class="clickable">
+                    </div>
+                    <div class="gallery-item small">
+                        <img src="assets/img/pro-league.jpg" alt="Arrêt spectaculaire" class="clickable">
+                    </div>
+                </div>
+
+                
+                <!-- Conteneur pour afficher l'image en grand -->
+                <!-- <div id="enlarged-image-container" class="hidden">
+                    <span id="close-button">&times;</span>
+                    <img id="enlarged-image" src="" alt="Agrandissement">
+                </div> -->
+            
             </section>
+            
         
             <!-- Section À propos -->
             <section id="about" class="about">
@@ -61,18 +112,18 @@
                 <h2>Mes Services</h2>
                 <div class="service-list">
                     <div class="service-item">
-                        <img class="service-img" src="./assets/img/4a1d85_5db195460d794c3bafd1040041a32bbe~mv2.avif" alt="image gardien entrainement">
-                        <h3>Entraînement personnalisé</h3>
+                        <img class="service-img" src="./assets/img/entrainement-perso.jpg" alt="image gardien entrainement">
+                        <h3>Training young goalkeeper</h3>
                         <p>Des séances adaptées à vos besoins spécifiques, que vous soyez débutant ou professionnel.</p>  
                     </div>
                     <div class="service-item">
-                        <img class="service-img" src="./assets/img/analyse-video.jpeg" alt="tablette video analyse">
-                        <h3>Analyse vidéo</h3>
+                        <img class="service-img" src="./assets/img/entrainement-explication.jpg" alt="tablette video analyse">
+                        <h3>Goalkeeper Training & Performance Professional</h3>
                         <p>Analyse détaillée des performances avec retours sur les points à améliorer.</p>
                     </div>
                     <div class="service-item">
-                        <img class="service-img" src="./assets/img/prepa physique.avif" alt="image gardien arret ballon">
-                        <h3>Préparation physique</h3>
+                        <img class="service-img" src="./assets/img/fred-adidas2.jpg" alt="image gardien arret ballon">
+                        <h3>Stage preparateur Goalkeeper of module 1 (5 days)</h3>
                         <p>Des exercices de renforcement physique spécifiques aux exigences des gardiens de but.</p>
                     </div>
                 </div>
@@ -94,14 +145,31 @@
                         <label for="message">Message</label>
                         <textarea id="message" placeholder="Votre Message" required></textarea>
                     </div>
-                    <button type="submit" class="cta-btn">Envoyer</button>
+                    <a href="" class="">
+                        <button type="submit" class="cta-btn">Envoyer</button>
+                    </a>
                 </form>
             </section>
         </main>
 
         <!-- Section Footer -->
         <footer>
-            <p>&copy; 2024 Coach Gardien | Tous droits réservés</p>
+            <p>&copy; 2024 Coach Gardien | CoachGoalKeeper.com</p>
+            <div class="social">
+                <a href="https://www.facebook.com/profile.php?id=100063722820711" target="_blank">
+                    <img src="./assets/img/facebook.png" alt="Facebook logo">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./assets/img/twitter(1).png" alt="Twitter logo">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./assets/img/linkedin.png" alt="Linkedin logo">
+                </a>
+                <a href="https://www.youtube.com/@cosak83" target="_blank">
+                    <img src="./assets/img/youtube.png" alt="Youtub logo">
+                </a>
+            </div>
+            
         </footer>
     </body>
 
