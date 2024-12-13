@@ -1,4 +1,4 @@
-/* Global */
+/* Global------------------------------------------------------------------------------------------ */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ a {
 }
 
 
-/* Navbar */
+/* Navbar-------------------------------------------------------------------------------------------- */
 .navbar {
     background: #2C3E50; /* Bleu foncé */
     color: white;
@@ -106,7 +106,8 @@ a {
     }
 }
 
-/* Hero Section */
+
+/* Hero Section---------------------------------------------------------------------------------------- */
 .modern-hero {
     position: relative;
     color: #004080;
@@ -238,13 +239,17 @@ a {
     cursor: pointer; /* Change le curseur en main */
 }
 
-
-
-
 /* Responsive adjustments */
+@media (min-width: 1025px) {
+    .hero-gallery {
+        margin: auto 150px; /* Exemple : réduire la marge */
+    }
+}
+
 @media (max-width: 1024px) {
     .hero-gallery {
         grid-template-columns: repeat(4, 1fr);
+        /* margin: 200px; */
     }
 }
 
@@ -258,8 +263,8 @@ a {
     }
 }
 
-/* About Section */
 
+/* About Section---------------------------------------------------------------------------- */
 .about img.img-propos {
     width: 100%; /* Prend 100% de la largeur du parent */
     max-width: 400px; /* Limite la largeur à 400px, vous pouvez ajuster cette valeur */
@@ -361,6 +366,13 @@ a {
     padding: 15px;
 }
 
+/* Responsive adjustments */
+@media (min-width: 1025px) {
+    .service-list {
+        margin: auto 150px; /* Exemple : réduire la marge */
+    }
+}
+
 @media (max-width: 768px) {
     .service-list {
         flex-direction: column;
@@ -373,7 +385,8 @@ a {
     }
 }
 
-/* Contact Section */
+
+/* Contact Section----------------------------------------------------------------------------------- */
 .contact {
     padding: 60px 0;
     background: #e04837d6; /* Rouge doux */
@@ -427,7 +440,9 @@ button[type="submit"]:hover {
     }
 }
 
-/* Footer */
+
+
+/* Footer----------------------------------------------------------------------------------------------*/
 footer {
     background: #2C3E50; /* Bleu foncé */
     color: white;
