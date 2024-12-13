@@ -64,12 +64,7 @@ a {
     pointer-events: none; /* Ignorer les clics */
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .floating-logo img {
-        width: 220px; /* Réduction de la taille pour tablettes */
-    }
-}
+
 
 @media (max-width: 768px) {
     .floating-logo {
@@ -78,23 +73,6 @@ a {
     .floating-logo img {
         width: 200px; /* Taille plus petite pour mobiles */
     }
-}
-
-@media (max-width: 480px) {
-    .floating-logo img {
-        width: 100px; /* Taille encore réduite pour petits écrans */
-    }
-}
-
-/* Style de la ligne sous le header */
-.header-line {
-    height: 4px;  /* Hauteur de la ligne */
-    background-color: #e04837;  /* Exemple de couleur orange/rouge. Changez cette couleur selon celle du bouton */
-    margin: 0; /* Assurez-vous qu'il n'y ait pas d'espace autour de la ligne */
-}
-
-
-@media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
         align-items: center;
@@ -104,6 +82,27 @@ a {
     .nav-links li {
         margin: 10px 0;
     }
+}
+
+
+@media (max-width: 1024px) {
+    .floating-logo img {
+        width: 220px; /* Réduction de la taille pour tablettes */
+    }
+}
+@media (max-width: 480px) {
+    .floating-logo img {
+        width: 100px; /* Taille encore réduite pour petits écrans */
+    }
+}
+
+
+
+/* Style de la ligne sous le header -----------------------------------------------------------------------*/
+.header-line {
+    height: 4px;  /* Hauteur de la ligne */
+    background-color: #e04837;  /* Exemple de couleur orange/rouge. Changez cette couleur selon celle du bouton */
+    margin: 0; /* Assurez-vous qu'il n'y ait pas d'espace autour de la ligne */
 }
 
 
@@ -319,52 +318,109 @@ a {
 
 
 /* Services Section */
+/* Styles généraux */
 .services {
     padding: 60px 0;
     text-align: center;
-    background-color: #e6eff6; /* Gris doux */
+    background-color: #f4f4f4;
 }
 
 .service-list {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 30px;
 }
 
 .service-item {
     width: 30%;
-    padding: 10px; /* Corrigé padding */
-    background: #FFF;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Permet de masquer les débordements de l'image */
-    margin-bottom: 20px; /* Espacement entre les blocs */
-    transition: transform 0.3s ease; /* Effet de transition */
+    min-width: 280px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
 }
 
 .service-item:hover {
-    transform: scale(1.05); /* Légère augmentation à l'effet de survol */
+    transform: scale(1.05);
 }
 
 .service-img {
     width: 100%;
-    height:45%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.services h2 {
-    font-size: 2.5rem;
-    color:#004080;
+/* Modal (deuxième plan) */
+.modal {
+    display: none; /* caché par défaut */
+    position: fixed;
+    z-index: 9999; /* s'assure qu'il est en haut */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* arrière-plan sombre */
+    overflow: auto; /* permet de défiler si nécessaire */
 }
 
-.service-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #e04837 ;
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 900px;
 }
 
-.service-item p {
-    font-size: 1.1em;
-    padding: 15px;
+.close-modal-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
 }
+
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h3 {
+    color: #e04837;
+    font-size: 1.6em;
+}
+
+/* Pour le contenu de la modal */
+.modal-content h4 {
+    color: #004080;
+    font-size: 1.2em;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
 
 /* Responsive adjustments */
 @media (min-width: 1025px) {

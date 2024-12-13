@@ -10,14 +10,13 @@
     </head>
 
     <body>
-        <!-- Section Navbar -->
+        <!-- Section Navbar ----------------------------------------------------------------------------------------------------------->
         <header>
             <nav class="navbar">
-                <div class="logo">
-                    <!-- <img class="" src="assets/img/gardien-header-v3.png" alt="Logo Gardien" /> -->
-                    <!-- <img class="header-logo" src="assets/img/logo2-removebg-preview.png" alt="Logo Gardien" /> -->
-                    <!-- <img class="" src="assets/img/logo3-removebg-preview.png" alt="Logo Gardien" /> -->
-                    <!-- <img class="" src="assets/img/logo4-removebg-preview.png" alt="Logo Gardien" /> -->
+                <div class="burger-menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Welcome</a></li>
@@ -35,6 +34,7 @@
         </div>
 
         <main>
+            <!-- Section Home ----------------------------------------------------------------------------------------------------------->
             <section id="home" class="hero modern-hero">
                 <div class="hero-content">
                     <h1>Welcome</h1>
@@ -87,7 +87,7 @@
             </section>
             
         
-            <!-- Section À propos -->
+            <!-- Section À propos -------------------------------------------------------------------------------------------------------->
             <section id="about" class="about">
                 <div class="about-content">
                     <div class="about-img-container">
@@ -106,29 +106,49 @@
            
             
         
-            <!-- Section Services -->
+            <!-- Section Services -------------------------------------------------------------------------------------------------------->
             <section id="services" class="services">
                 <h2>Mes Services</h2>
+                
                 <div class="service-list">
+                    <!-- Service 1 -->
                     <div class="service-item">
                         <img class="service-img" src="./assets/img/entrainement-perso.jpg" alt="image gardien entrainement">
                         <h3>Training young goalkeeper</h3>
-                        <p>Des séances adaptées à vos besoins spécifiques, que vous soyez débutant ou professionnel.</p>  
+                        <button class="open-modal-btn" data-service="1">Voir les détails</button>
                     </div>
+                    
+                    <!-- Service 2 -->
                     <div class="service-item">
                         <img class="service-img" src="./assets/img/entrainement-explication.jpg" alt="tablette video analyse">
                         <h3>Goalkeeper Training & Performance Professional</h3>
-                        <p>Analyse détaillée des performances avec retours sur les points à améliorer.</p>
+                        <button class="open-modal-btn" data-service="2">Voir les détails</button>
                     </div>
+            
+                    <!-- Service 3 -->
                     <div class="service-item">
                         <img class="service-img" src="./assets/img/fred-adidas2.jpg" alt="image gardien arret ballon">
                         <h3>Stage preparateur Goalkeeper of module 1 (5 days)</h3>
-                        <p>Des exercices de renforcement physique spécifiques aux exigences des gardiens de but.</p>
+                        <button class="open-modal-btn" data-service="3">Voir les détails</button>
                     </div>
                 </div>
             </section>
-        
-            <!-- Section Contact -->
+            
+            <!-- Modal pour afficher les détails du service -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal-btn">&times;</span>
+                    <div id="modal-service-content">
+                        <!-- Le contenu du service sera injecté ici via JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            <!-- Section Contact---------------------------------------------------------------------------------------------------------------- -->
             <section id="contact" class="contact">
                 <h2>Contactez-moi</h2>
                 <form action="#">
@@ -151,7 +171,7 @@
             </section>
         </main>
 
-        <!-- Section Footer -->
+        <!-- Section Footer ------------------------------------------------------------------------------------------------------------->
         <footer>
             <p>&copy; 2024 Coach Gardien | CoachGoalKeeper.com</p>
             <div class="social">
@@ -167,8 +187,7 @@
                 <a href="https://www.youtube.com/@cosak83" target="_blank">
                     <img src="./assets/img/youtube.png" alt="Youtub logo">
                 </a>
-            </div>
-            
+            </div>    
         </footer>
     </body>
 
