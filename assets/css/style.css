@@ -274,7 +274,7 @@ a {
 
 .about {
     padding: 50px 20px; /* Espacement global */
-    background-color: #f9f9f9; /* Couleur de fond douce */
+    background-color: #dcd7d7; /* Couleur de fond douce */
 }
 
 .about-content {
@@ -350,7 +350,7 @@ a {
 
 .service-img {
     width: 100%;
-    height: 200px;
+    height: 470px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -375,6 +375,41 @@ a {
     border-radius: 10px;
     width: 70%;
     max-width: 900px;
+}
+
+/* Styles du bouton "Voir les détails" */
+.open-modal-btn {
+    padding: 10px 20px;
+    margin-top: 40px;
+    background-color: #e04837; /* Couleur de fond rouge orangé */
+    color: white;
+    border: none;
+    border-radius: 30px; /* Bords arrondis */
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transition pour l'effet au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour donner un effet de profondeur */
+}
+
+/* Effet au survol */
+.open-modal-btn:hover {
+    background-color: #c23a2e; /* Couleur légèrement plus sombre au survol */
+    transform: translateY(-5px); /* Légère remontée au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre plus marquée pour l'effet de survol */
+}
+
+/* Effet de clic */
+.open-modal-btn:active {
+    transform: translateY(0); /* Revenir à la position initiale lors du clic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Réduire l'ombre lors du clic */
+}
+
+/* Effet d'animation pour faire ressortir le bouton (focus ou survol) */
+.open-modal-btn:focus {
+    outline: none; /* Retirer le contour par défaut */
+    border: 2px solid #004080; /* Bordure bleue au focus */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Légère ombre autour lors du focus */
 }
 
 .close-modal-btn {
@@ -414,6 +449,7 @@ h3 {
 
     .service-item {
         width: 80%;
+        margin-bottom: 20px;
     }
 
     .modal-content {
@@ -423,23 +459,12 @@ h3 {
 
 
 /* Responsive adjustments */
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
     .service-list {
-        margin: auto 150px; /* Exemple : réduire la marge */
+        margin: auto 150px; 
     }
-}
+} */
 
-@media (max-width: 768px) {
-    .service-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-item {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-}
 
 
 /* Contact Section----------------------------------------------------------------------------------- */
