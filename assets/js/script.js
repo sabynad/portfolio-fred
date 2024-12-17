@@ -2,6 +2,24 @@ console.log("test ok");
 
 
 /* Menu burger--------------------------------------------------------------------------------------------------------- */
+function toggleMenu() {
+    const burger = document.getElementById('burger-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    // Toggle les classes pour ouvrir/fermer
+    burger.classList.toggle('open');
+    navLinks.classList.toggle('active');
+}
+
+function closeMenu() {
+    const burger = document.getElementById('burger-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    // Ferme le menu lorsque l'on clique sur un élément du menu
+    burger.classList.remove('open');
+    navLinks.classList.remove('active');
+}
+
 
 
 

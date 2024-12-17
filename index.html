@@ -11,21 +11,25 @@
 
     <body>
         <!-- Section Navbar ----------------------------------------------------------------------------------------------------------->
+    
         <header>
             <nav class="navbar">
-                <div class="burger-menu">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+                <div class="logo">Coach<span>GoalKeeper</span></div>
+                <div class="burger" id="burger-menu" onclick="toggleMenu()">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#home">Welcome</a></li>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home" onclick="closeMenu()">Welcome</a></li>
+                    <li><a href="#about" onclick="closeMenu()">À propos</a></li>
+                    <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                    <li><a href="#galerie" onclick="closeMenu()">Galerie</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
                 </ul>
             </nav>
         </header>
+        
 
         <div class="header-line"></div>
 
@@ -34,14 +38,90 @@
         </div>
 
         <main>
-            <!-- Section Home ----------------------------------------------------------------------------------------------------------->
-            <section id="home" class="hero modern-hero">
-                <div class="hero-content">
-                    <h1>Welcome</h1>
-                    <p>the universe apart from goalkeepers.
+
+            <!-- Section À propos -------------------------------------------------------------------------------------------------------->
+            <section id="home" class="about">
+                <div class="about-welcome">
+                    <div>
+                        <h2>Welcome</h2>
+                    </div>
+                    <div>
+                        <p>the universe apart from goalkeepers.
                         Discover more than 22 years of coaching experience in the world!</p>
-                    <a href="#contact" class="cta-btn join-us-btn"> Rejoignez-nous</a>
+                    </div>
+                    <div>
+                        <a href="#contact" class="cta-btn join-us-btn"> Rejoignez-nous</a>
+                    </div>
                 </div>
+                <div class="about-content">
+                    <div class="about-img-container">
+                        <img src="./assets/img/IMG_7480.avif" alt="Entrainement Gardien" class="about-img">
+                    </div>
+                    <div class="about-text">
+                        <h2>À propos de moi</h2>
+                        <p>
+                            Je suis ANIKINE Frédèric, Coach expérimenté spécialisé dans l'entraînement des gardiens de but. 
+                            Avec plusieurs années d'expérience, j'ai aidé de nombreux gardiens à perfectionner leurs compétences 
+                            et à atteindre leurs objectifs. Mon approche est basée sur l'innovation et l'écoute des besoins individuels.
+                        </p>
+                    </div>
+                </div>
+            </section>
+           
+            
+        
+            <!-- Section Services -------------------------------------------------------------------------------------------------------->
+            <section id="services" class="services">
+                <h2>Mes Services</h2>
+                
+                <div class="service-list">
+                    <!-- Service 1 -->
+                    <div class="service-item">
+                        <img class="service-img" src="./assets/img/entrainement-perso.jpg" alt="image gardien entrainement">
+                        <h3>Training young goalkeeper</h3>
+                        <p class="service-description">Un programme dédié à l'entraînement des jeunes gardiens, avec des techniques adaptées à leur niveau.</p>
+                        <div class="button-container">
+                            <button class="open-modal-btn" data-service="1">Voir les détails</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="service-item">
+                        <img class="service-img" src="./assets/img/entrainement-explication.jpg" alt="tablette video analyse">
+                        <h3>Goalkeeper Training & Performance Professional</h3>
+                        <p class="service-description">Un entraînement professionnel, axé sur la performance et la préparation mentale des gardiens.</p>
+                        <div class="button-container">
+                            <button class="open-modal-btn" data-service="2">Voir les détails</button>
+                        </div>
+                    </div>
+            
+                    <!-- Service 3 -->
+                    <div class="service-item">
+                        <img class="service-img" src="./assets/img/fred-adidas2.jpg" alt="image gardien arret ballon">
+                        <h3>Stage préparateur Goalkeeper of module 1 (5 days)</h3>
+                        <p class="service-description">Stage de 5 jours pour les entraîneurs et gardiens, axé sur les fondamentaux techniques et physiques du gardien.</p>
+                        <div class="button-container">
+                            <button class="open-modal-btn" data-service="3">Voir les détails</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Modal pour afficher les détails du service -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal-btn">&times;</span>
+                    <div id="modal-service-content">
+                        <!-- Le contenu du service sera injecté ici via JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <!-- Section Galery ----------------------------------------------------------------------------------------------------------->
+            <section id="galerie" class="hero modern-hero">
+                
                 <div class="hero-gallery">
                     <div class="gallery-item large">
                         <img src="assets/img/arret.jpg" alt="Gardien en action" class="clickable">
@@ -86,67 +166,6 @@
             
             </section>
             
-        
-            <!-- Section À propos -------------------------------------------------------------------------------------------------------->
-            <section id="about" class="about">
-                <div class="about-content">
-                    <div class="about-img-container">
-                        <img src="./assets/img/IMG_7480.avif" alt="Entrainement Gardien" class="about-img">
-                    </div>
-                    <div class="about-text">
-                        <h2>À propos de moi</h2>
-                        <p>
-                            Je suis ANIKINE Frédèric, Coach expérimenté spécialisé dans l'entraînement des gardiens de but. 
-                            Avec plusieurs années d'expérience, j'ai aidé de nombreux gardiens à perfectionner leurs compétences 
-                            et à atteindre leurs objectifs. Mon approche est basée sur l'innovation et l'écoute des besoins individuels.
-                        </p>
-                    </div>
-                </div>
-            </section>
-           
-            
-        
-            <!-- Section Services -------------------------------------------------------------------------------------------------------->
-            <section id="services" class="services">
-                <h2>Mes Services</h2>
-                
-                <div class="service-list">
-                    <!-- Service 1 -->
-                    <div class="service-item">
-                        <img class="service-img" src="./assets/img/entrainement-perso.jpg" alt="image gardien entrainement">
-                        <h3>Training young goalkeeper</h3>
-                        <button class="open-modal-btn" data-service="1">Voir les détails</button>
-                    </div>
-                    
-                    <!-- Service 2 -->
-                    <div class="service-item">
-                        <img class="service-img" src="./assets/img/entrainement-explication.jpg" alt="tablette video analyse">
-                        <h3>Goalkeeper Training & Performance Professional</h3>
-                        <button class="open-modal-btn" data-service="2">Voir les détails</button>
-                    </div>
-            
-                    <!-- Service 3 -->
-                    <div class="service-item">
-                        <img class="service-img" src="./assets/img/fred-adidas2.jpg" alt="image gardien arret ballon">
-                        <h3>Stage preparateur Goalkeeper of module 1 (5 days)</h3>
-                        <button class="open-modal-btn" data-service="3">Voir les détails</button>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Modal pour afficher les détails du service -->
-            <div id="modal" class="modal">
-                <div class="modal-content">
-                    <span class="close-modal-btn">&times;</span>
-                    <div id="modal-service-content">
-                        <!-- Le contenu du service sera injecté ici via JavaScript -->
-                    </div>
-                </div>
-            </div>
-            
-            
-            
-            
             
             <!-- Section Contact---------------------------------------------------------------------------------------------------------------- -->
             <section id="contact" class="contact">
@@ -173,7 +192,8 @@
 
         <!-- Section Footer ------------------------------------------------------------------------------------------------------------->
         <footer>
-            <p>&copy; 2024 Coach Gardien | CoachGoalKeeper.com</p>
+            <div class="logo">Coach<span>GoalKeeper</span></div>
+            <p>&copy; 2024 | CoachGoalKeeper.com</p>
             <div class="social">
                 <a href="https://www.facebook.com/profile.php?id=100063722820711" target="_blank">
                     <img src="./assets/img/facebook.png" alt="Facebook logo">
