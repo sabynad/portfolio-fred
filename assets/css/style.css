@@ -132,7 +132,7 @@ h2 {
         display: flex; /* Assurer que les liens soient visibles */
         flex-direction: row;
     }
-
+    
     .floating-logo img {
         width: 350px; /* Taille ajustée pour tablettes */
     }
@@ -144,9 +144,14 @@ h2 {
 
 /* POUR PETITS ÉCRANS (max-width: 480px) */
 @media (max-width: 480px) {
+    .floating-logo {
+        position: absolute;
+        top: calc(100px + 5%); /* Ajuste en fonction de la hauteur du header */
+        left: 50%; /* Centrage horizontal */
+        transform: translate(-50%, -50%); /* Centrage parfait */
+    }
     .floating-logo img {
-        width: 150px; /* Taille encore plus réduite pour petits écrans */
-        margin-top: 50px;
+        width: 150px; /* Taille réduite pour petits écrans */
     }
 
     .navbar {
@@ -172,7 +177,7 @@ h2 {
 }
 
 .about {
-    padding: 0px 20px; /* Espacement global */
+    padding: 0px 20px 35px; /* Espacement global */
     background-color: #dcd7d7; /* Couleur de fond douce */
 }
 
