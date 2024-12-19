@@ -38,7 +38,7 @@ h2 {
 
 .floating-logo {
     position: absolute;
-    top: 45px;
+    top: 75px;
     left: 200px; /* Centrer horizontalement */
     transform: translateX(-50%); /* Assurez un centrage parfait */
     z-index: 2;
@@ -107,6 +107,7 @@ h2 {
 
     .nav-links.active {
         display: flex; /* Afficher les liens lorsque le menu burger est actif */
+        padding-top: 90px;
     }
 
     .nav-links li {
@@ -121,6 +122,15 @@ h2 {
         align-items: center;
     }
 }
+@media (min-width: 1025px) {
+    .floating-logo {
+        top: 25px;
+    }
+
+    .about-content{
+        margin-top: 50px !important;
+    }
+}
 
 /* POUR TABLETTES (entre 769px et 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -132,9 +142,15 @@ h2 {
         display: flex; /* Assurer que les liens soient visibles */
         flex-direction: row;
     }
-    
+    .floating-logo {
+        top: 80px; /* Ajuste la position verticale si nécessaire */
+        left: 20%; /* Garde centré horizontalement */
+        transform: translateX(-50%);
+    }
+
     .floating-logo img {
-        width: 350px; /* Taille ajustée pour tablettes */
+        width: 250px; /* Changez cette taille selon vos besoins */
+        height: auto; /* Conserve le ratio de l'image */
     }
 
     .navbar {
@@ -177,17 +193,8 @@ h2 {
 }
 
 .about {
-    padding: 0px 20px 35px; /* Espacement global */
+    padding: 100px 20px 35px; /* Espacement global */
     background-color: #dcd7d7; /* Couleur de fond douce */
-}
-
-
-.about-welcome {
-    text-align: center;
-    z-index: 2;
-    position: relative;
-    width: 100%;
-    padding: 70px;
 }
 
 .join-us-btn {
@@ -231,12 +238,8 @@ h2 {
 }
 
 @media (max-width: 480px) {
-    .about-welcome {
-        /* text-align: center; */
-        z-index: 2;
-        position: relative;
-        width: 100%;
-        padding: 70px;
+    .about {
+        padding: 40px 20px 35px;
     }
     .about-content {
         display: flex;
@@ -421,8 +424,12 @@ h3 {
     }
 
     .service-item {
-        width: 80%;
-        margin-bottom: 20px;
+        width: 80%; 
+        margin-bottom: 40px;
+    }
+    
+    .service-img {
+        height: auto;
     }
 
     .modal-content {
