@@ -81,6 +81,7 @@ h2 {
         height: 20px;
         cursor: pointer;
         z-index: 3;
+        transition: all 0.3s ease;
     }
 
     .burger .line {
@@ -88,6 +89,23 @@ h2 {
         height: 4px;
         border-radius: 2px;
         transition: all 0.3s ease;
+    }
+
+    /* Transformation des lignes en croix quand le menu est actif */
+    .burger.open .line:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 6px; /* Décale légèrement la première ligne */
+    }
+
+    .burger.open .line:nth-child(2) {
+        opacity: 0; /* Cache la deuxième ligne */
+    }
+
+    .burger.open .line:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -6px; /* Décale légèrement la troisième ligne */
     }
 
     .nav-links {
@@ -114,22 +132,22 @@ h2 {
         margin: 10px 0;
     }
 
-    .floating-logo img {
-        width: 200px; /* Taille plus petite pour mobiles */
-    }
-
     .navbar {
         align-items: center;
     }
 }
-@media (min-width: 1025px) {
-    .floating-logo {
-        top: 25px;
+
+    .floating-logo img {
+        width: 200px; /* Taille plus petite pour mobiles */
     }
 
-    .about-content{
-        margin-top: 50px !important;
+
+@media (min-width: 1025px) {
+    .floating-logo img {
+        width: 250px;
     }
+
+    
 }
 
 /* POUR TABLETTES (entre 769px et 1024px) */
@@ -197,14 +215,8 @@ h2 {
     background-color: #dcd7d7; /* Couleur de fond douce */
 }
 
-.join-us-btn {
-    margin-top: 15px;
-}
-
 .about-content {
     display: flex;
-    
-    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap; /* Pour gérer le responsive */
     gap: 20px; /* Espacement entre les éléments */
@@ -226,7 +238,7 @@ h2 {
 
 .about-text {
     flex: 1;
-    max-width: 600px; /* Largeur maximale du texte */
+    max-width: 665px; /* Largeur maximale du texte */
     text-align: center;
 }
 
@@ -237,45 +249,10 @@ h2 {
     color: #333; /* Texte sombre */
 }
 
-@media (max-width: 480px) {
-    .about {
-        padding: 40px 20px 35px;
-    }
-    .about-content {
-        display: flex;
-        flex-direction: column;
-    }    
-    .join-us-btn {
-        margin-top: 15px;
-    }
-}
-
-
-/* Hero Section------------------------------------------------------------------------------------------------------ */
-.modern-hero {
-    position: relative;
-    color: #004080;
-    background-color: #e6eff6;
-    padding: 50px 20px;
-    overflow: hidden;
-    text-align: center;
-}
-
-
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
 .join-us-btn {
     display: inline-block;
     padding: 5px 10px;
+    margin-top: 15px;
     font-size: 1rem;
     font-weight: bold;
     color: white; /* Couleur du texte */
@@ -291,6 +268,43 @@ h2 {
     transform: scale(1.05); /* Agrandissement léger */
     text-decoration: none; 
 }
+
+.diplome {
+    /* display: flex; */
+    /* display: inline-block; */
+    margin-top: 60px;
+}
+
+.diplome img {
+    width: 35%;
+    margin: 5px 20px;
+}
+
+@media (min-width: 1024px) {
+    
+    .about {
+        padding-top: 150px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .about {
+        padding: 40px 20px 35px;
+    }
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }    
+    .join-us-btn {
+        margin-top: 15px;
+    }
+
+    .diplome img {
+        width: 70%;
+    }
+}
+
 
 
 /* Services Section------------------------------------------------------------------------------------------------------------------------ */
@@ -360,7 +374,7 @@ h2 {
     background-color: #e04837; /* Couleur de fond rouge orangé */
     color: white;
     border: none;
-    border-radius: 30px; /* Bords arrondis */
+    border-radius: 10px; /* Bords arrondis */
     font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
@@ -438,13 +452,22 @@ h3 {
 }
 
 /* Gallery Section------------------------------------------------------------------------------------------------------------------------- */
+/* Styles généraux */
+.hero {
+    text-align: center;
+    padding: 2rem 0; /* Supprime les marges sur les côtés */
+    margin: 0 auto; /* Centre la galerie */
+    margin-bottom: 60px;
+    max-width: 1200px; /* Facultatif pour limiter la largeur totale */
+}
+
+/* Galerie avec CSS Grid */
 .hero-gallery {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 150px;
-    gap: 10px;
-    position: relative;
-    z-index: 1;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem; /* Espacement entre les images */
+    margin: 2rem auto; /* Centrage de la galerie */
+    padding: 0 1rem; /* Marges à gauche et droite */
 }
 
 .gallery-item {
@@ -455,98 +478,69 @@ h3 {
 
 .gallery-item img {
     width: 100%;
-    height: auto;
-    object-fit: cover; /* Assure que l'image remplit le cadre sans déformation */
-    
-    transition: transform 0.3s ease;
+    height: 100%;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);  /* Zoom léger au survol */
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Sizes for different gallery items */
-/* Taille des items pour garantir des proportions harmonieuses */
-.gallery-item.large {
+/* Différentes tailles d'images */
+.gallery-item.small {
     grid-column: span 1;
-    grid-row: span 1;
 }
 
 .gallery-item.medium {
     grid-column: span 2;
-    grid-row: span 1;
 }
 
-.gallery-item.small {
-    grid-column: span 1;
-    grid-row: span 1;
+.gallery-item.large {
+    grid-column: span 3;
 }
 
-/* Conteneur de l'image agrandie */
+/* Modal pour l'image agrandie */
 #enlarged-image-container {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     z-index: 1000;
-    visibility: hidden;
     opacity: 0;
-    transition: visibility 0.3s, opacity 0.3s;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
-#enlarged-image-container.visible {
-    visibility: visible;
-    opacity: 1;
-}
-
-#enlarged-image {
+#enlarged-image-container img {
     max-width: 90%;
     max-height: 90%;
     border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+#enlarged-image-container.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 #close-button {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     font-size: 2rem;
     color: white;
     cursor: pointer;
-    user-select: none;
+    z-index: 1001;
 }
 
-.clickable {
-    cursor: pointer; /* Change le curseur en main */
-}
-
-/* Responsive adjustments */
-@media (min-width: 1025px) {
-    .hero-gallery {
-        margin: auto 150px; /* Exemple : réduire la marge */
-    }
-}
-
-@media (max-width: 1024px) {
-    .hero-gallery {
-        grid-template-columns: repeat(4, 1fr);
-        /* margin: 200px; */
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 /* Contact Section----------------------------------------------------------------------------------- */
 .contact {
@@ -634,6 +628,12 @@ footer img {
     height: 35px;
     margin-right: 15px;
     transition: transform 0.3s ease;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @media (max-width: 768px) {

@@ -6,7 +6,7 @@ function toggleMenu() {
     const burger = document.getElementById('burger-menu');
     const navLinks = document.getElementById('nav-links');
 
-    // Toggle les classes pour ouvrir/fermer
+    // Toggle les classes pour ouvrir/fermer le menu burger
     burger.classList.toggle('open');
     navLinks.classList.toggle('active');
 }
@@ -25,35 +25,46 @@ function closeMenu() {
 
 
 
-/* section home modern-hero--------------------------------------------------------------------------------------------------------- */
+// Gallery-----------------------
 document.addEventListener("DOMContentLoaded", function () {
     const enlargedContainer = document.getElementById("enlarged-image-container");
     const enlargedImage = document.getElementById("enlarged-image");
     const closeButton = document.getElementById("close-button");
 
-    // Cibler toutes les images cliquables
-    document.querySelectorAll(".clickable").forEach((image) => {
-        image.addEventListener("click", () => {
-            enlargedImage.src = image.src; // Copier l'image source
-            enlargedContainer.classList.add("visible"); // Afficher le conteneur
-        });
+    // Gestion des clics sur les images (Delegation d'événements)
+    document.querySelector(".hero-gallery").addEventListener("click", (event) => {
+        const clickedImage = event.target;
+        if (clickedImage.classList.contains("clickable")) {
+            enlargedImage.src = clickedImage.src;
+            enlargedContainer.classList.add("visible");
+        }
     });
 
     // Fermer l'image agrandie
-    closeButton.addEventListener("click", () => {
+    const closeModal = () => {
         enlargedContainer.classList.remove("visible");
-        enlargedImage.src = ""; // Réinitialiser la source
-    });
+        enlargedImage.src = "";
+    };
+
+    closeButton.addEventListener("click", closeModal);
 
     // Fermer en cliquant à l'extérieur de l'image
     enlargedContainer.addEventListener("click", (event) => {
         if (event.target === enlargedContainer) {
-            enlargedContainer.classList.remove("visible");
-            enlargedImage.src = "";
+            closeModal();
+        }
+    });
+
+    // Fermer avec la touche "Escape"
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && enlargedContainer.classList.contains("visible")) {
+            closeModal();
         }
     });
 });
 
+
+ 
 
 /*Mes services----------------------------------------------------------------------------------------------------------------------------*/
 // Services data (simplified)

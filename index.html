@@ -15,6 +15,7 @@
         <header>
             <nav class="navbar">
                 <div class="logo">Coach<span>GoalKeeper</span></div>
+                
                 <div class="burger" id="burger-menu" onclick="toggleMenu()">
                     <span class="line"></span>
                     <span class="line"></span>
@@ -23,7 +24,8 @@
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#home" onclick="closeMenu()">A propos</a></li>
                     <li><a href="#services" onclick="closeMenu()">Services</a></li>
-                    <li><a href="#galerie" onclick="closeMenu()">Galerie</a></li>
+                    <li><a href="gallery.html" onclick="closeMenu()">Galerie</a></li>
+                    <li><a href="career.html" onclick="closeMenu()">Career</a></li>
                     <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
                 </ul>
             </nav>
@@ -53,6 +55,12 @@
                         </p>
                         <div>
                             <a href="#contact" class="cta-btn join-us-btn"> Rejoignez-nous</a>
+                        </div>
+                        <div class="diplome">
+                            <img src="assets/img/diplome2.jpeg" alt="Diplôme">
+                            <img src="assets/img/diplome1.jpeg" alt="Diplôme">
+                            <img src="assets/img/diplome3.jpeg" alt="Diplôme">
+                            <img src="assets/img/academy-yangon.jpeg" alt="Diplôme">
                         </div>
                     </div>
                 </div>
@@ -111,7 +119,7 @@
             
             <!-- Section Galery ----------------------------------------------------------------------------------------------------------->
             <section id="galerie" class="hero modern-hero">
-                
+                <h2>Gallery </h2>
                 <div class="hero-gallery">
                     <div class="gallery-item large">
                         <img src="assets/img/arret.jpg" alt="Gardien en action" class="clickable">
@@ -122,8 +130,9 @@
                     <div class="gallery-item medium">
                         <img src="assets/img/fred-trio-sourir.jpg" alt="trois joueurs qui sourient" class="clickable">
                     </div>
+                    
                     <div class="gallery-item medium">
-                        <img src="assets/img/fred-action.jpg" alt="Arrêt spectaculaire" class="clickable">
+                        <img src="assets/img/entrainement-explication.jpg" alt="Arrêt spectaculaire" class="clickable">
                     </div>
                     <div class="gallery-item large">
                         <img src="assets/img/coach.jpg" alt="Arrêt spectaculaire" class="clickable">
@@ -138,7 +147,7 @@
                         <img src="assets/img/gardien.jpg" alt="Arrêt spectaculaire" class="clickable">
                     </div>
                     <div class="gallery-item medium">
-                        <img src="assets/img/entrainement-explication.jpg" alt="Arrêt spectaculaire" class="clickable">
+                        <img src="assets/img/fred-action.jpg" alt="Arrêt spectaculaire" class="clickable">
                     </div>
                     <div class="gallery-item large">
                         <img src="assets/img/equipe.jpg" alt="Arrêt spectaculaire" class="clickable">
@@ -146,6 +155,9 @@
                     <div class="gallery-item small">
                         <img src="assets/img/pro-league.jpg" alt="Arrêt spectaculaire" class="clickable">
                     </div>
+                </div>
+                <div class="gallery-img">
+                    <a href="gallery.html" class="open-modal-btn">Voir plus</a>
                 </div>
 
                 <!-- Conteneur pour afficher l'image en grand -->
@@ -159,7 +171,6 @@
             
             <!-- Section Contact---------------------------------------------------------------------------------------------------------------- -->
             <section id="contact" class="contact">
-                <h2>Contactez-moi</h2>
                 <h2>Contactez-moi</h2>
                 <form action="send_email.php" method="POST">
                     <div class="form-group">
@@ -182,8 +193,11 @@
 
         <!-- Section Footer ------------------------------------------------------------------------------------------------------------->
         <footer>
+            <div class="container">
             <div class="logo">Coach<span>GoalKeeper</span></div>
-            <p>&copy; 2024 | CoachGoalKeeper.com</p>
+            <div>
+            <p>&copy; 2013 | CoachGoalKeeper.com</p>
+            </div>
             <div class="social">
                 <a href="https://www.facebook.com/profile.php?id=100063722820711" target="_blank">
                     <img src="./assets/img/facebook.png" alt="Facebook logo">
@@ -197,6 +211,10 @@
                 <a href="https://www.youtube.com/@cosak83" target="_blank">
                     <img src="./assets/img/youtube.png" alt="Youtub logo">
                 </a>
+                <a href="https://fr.wikipedia.org/wiki/Fichier:FREDERIC_ANIKINE.jpg" target="_blank">
+                    <img src="./assets/img/wikipedia.png" alt="Wikipedia logo">
+                </a>
+            </div>
             </div>    
         </footer>
     </body>
