@@ -25,7 +25,7 @@ function closeMenu() {
 
 
 
-// Gallery-----------------------
+// Gallery Home-----------------------
 document.addEventListener("DOMContentLoaded", function () {
     const enlargedContainer = document.getElementById("enlarged-image-container");
     const enlargedImage = document.getElementById("enlarged-image");
@@ -163,3 +163,6 @@ window.onclick = function(event) {
         document.getElementById('modal').style.display = "none";
     }
 };
+
+
+// Gallery page-----------------------------------------------------------------------------------------
